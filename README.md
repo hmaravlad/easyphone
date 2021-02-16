@@ -3,8 +3,12 @@
 ## Idea
 
 Application solves the problem of difficulties with interacting with programs. By the way
-
 application let user create a simplified UI by own self.
+**Features**:
+> Create shortcut buttons
+> Create macros for buttons
+> Sign Up/In/Out account
+
 
 ## Target audience
 
