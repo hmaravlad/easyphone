@@ -8,7 +8,7 @@ application let user create a simplified UI by own self.
 
 ## Target audience
 
-target audience of the application elderly and low-tech people
+Target audience of the application elderly and low-tech people
 
 ## Our team
 
@@ -22,9 +22,7 @@ target audience of the application elderly and low-tech people
 
 Application will support **Android 9.0** and later
 
-## Prototypes of application
-
-[low-fidelity prototype](https://www.figma.com/file/ELA9u3WLlwpWvMjtrkZjBk/Untitled?node-id=0%3A1)
+## [Prototypes of application](https://www.figma.com/file/ELA9u3WLlwpWvMjtrkZjBk/Untitled?node-id=0%3A1)
 
 
 
