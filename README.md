@@ -4,7 +4,7 @@
 
 Application solves the problem of difficulties with interacting with programs. By the way
 application let user create a simplified UI by own self.
-**Features**:
+**Features:**
 1. Create shortcut buttons.
 2. Create macros for buttons.
 3. Sign Up/In/Out account.
@@ -27,7 +27,7 @@ application let user create a simplified UI by own self.
 
 ## Base for development
 
-**Kotlin **(Could*be*updated*later*).
+**Kotlin** (*Could be updated later*).
 
 Application will support **Android 9.0** and later
 
