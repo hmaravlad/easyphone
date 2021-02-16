@@ -25,9 +25,12 @@ application let user create a simplified UI by own self.
 
 ***Atiukov Oleksandr*** -`developer`
 
-## Base for development
+## Technical stack
 
-**Kotlin** (*Could be updated later*).
+* **Kotlin** 
+* **NodeJs + Koa** - backend
+
+(*Could be updated later*).
 
 Application will support **Android 9.0** and later
 
