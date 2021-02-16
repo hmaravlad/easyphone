@@ -32,6 +32,6 @@ application let user create a simplified UI by own self.
 Application will support **Android 9.0** and later
 
 ## [Prototypes of application](https://www.figma.com/file/ELA9u3WLlwpWvMjtrkZjBk/Untitled?node-id=0%3A1)
-![Prototypes of application available by the previous link](source/screens.png "screens of application")
+![Prototypes of application available by the previous link](screens.png "screens of application")
 
 
