@@ -4,15 +4,27 @@
 
 Application solves the problem of difficulties with interacting with programs. By the way
 application let user create a simplified UI by own self.
+
 **Features:**
 1. Create shortcut buttons.
-2. Create macros for buttons.
-3. Sign Up/In/Out account.
+2. Create macroses for buttons.
+    * Open certain web-page
+    * Open certain application (with certain)
+    * Call certain number
+    * Create SMS by certain template (for example, can use geolocation data in SMS)
+    * Write an email by certain template
+    * Extract certain data (time, weather, news via rss, etc)
+3. Customize buttons:
+    * Change font
+    * Change color
+    * Change size
+4. Sign Up/In/Out account.
+5. Synchonize data via account
 
 
 ## Target audience
 
-* Target audience of the application elderly and low-tech people that has trouble with several steps actions in their mobile, also people that often use similar actions could use macros to save their time.
+* Target audience of the application elderly and low-tech people that has trouble with several steps actions in their mobile (and who have someone to help them with installation), also people that often use similar actions could use macros to save their time.
 
 > As an example application could suit businessman for fast calls or unemployed retiree to get favorite news or chanel in phone.
 > So simplified interface will speed up interaction with phone and lower the entry threshold.
