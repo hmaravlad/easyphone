@@ -18,6 +18,7 @@ application let user create a simplified UI by own self.
     * Change font
     * Change color
     * Change size
+    * Change order of buttons
 4. Sign Up/In/Out account.
 5. Synchonize data via account
 
