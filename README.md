@@ -21,6 +21,11 @@ application let user create a simplified UI by own self.
 4. Sign Up/In/Out account.
 5. Synchonize data via account
 
+**Screens:**
+* Main screen - customized buttons are here
+* Main screen in edit mode 
+* Edit button screen
+* Account screen
 
 ## Target audience
 
