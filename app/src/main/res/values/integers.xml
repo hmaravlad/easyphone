@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="row_number">12</integer>
+    <integer name="column_number">4</integer>
+    <integer name="min_text_zize">10</integer>
+    <integer name="max_text_zize">32</integer>
+</resources>
