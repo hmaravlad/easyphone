@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.easyphone.ui.editor.EditorViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="#876D6D"
+        tools:context=".ui.editor.EditorFragment">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/buttonTable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:columnCount="@integer/column_number"
+            app:rowCount="@integer/row_number" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/createButtonButton"
+            style="@style/Theme.EasyPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="32dp"
+            android:backgroundTint="@color/primaryColor"
+            android:contentDescription="@string/add_btn"
+            app:srcCompat="@drawable/ic_add"
+            app:tint="@color/white" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
