@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">EasyPhone</string>
+    <string name="editor">Editor</string>
+    <string name="add_action">Add action</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="name">Name</string>
+    <string name="length">Length (max 4)</string>
+    <string name="heigth">Height (max 6)</string>
+    <string name="color">Color</string>
+    <string name="row_error_big">Number of rows specified is too big</string>
+    <string name="column_error_big">Number of columns specified is too big</string>
+    <string name="row_error_0">Number of rows can\'t be 0</string>
+    <string name="column_error_0">Number of columns can\'t be 0</string>
+    <string name="text_size_big">Text size is too big</string>
+    <string name="text_size_small">Text size is too small</string>
+    <string name="free_place_error">There are no free place for this button</string>
+    <string name="have_errors_error">Please fix errors before submitting</string>
+    <string name="delete">Delete</string>
+    <string name="set_action">Set action</string>
+    <string name="set_app">Set app</string>
+    <string name="account">Account</string>
+    <string name="retry">Retry</string>
+    <string name="export">Export</string>
+    <string name="imp">Import</string>
+    <string name="add_btn">Add button</string>
+    <string name="button_preview">Button preview</string>
+    <string name="sign_in_google">Google sign in</string>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.action.ActionEditFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.easyphone.ui.action.ActionEditViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/argsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/setAppButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin"
+            android:text="@string/set_app"
+            android:contentDescription="@string/set_app"
+            android:onClick="@{() -> viewModel.onSetApp()}"/>
+        <Button
+            android:id="@+id/confirmButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin"
+            android:contentDescription="@string/confirm"
+            android:text="@string/confirm"
+            android:onClick="@{() -> viewModel.onSubmit()}"/>
+    </LinearLayout>
+</layout>

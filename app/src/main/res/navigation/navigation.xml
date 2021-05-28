@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.easyphone.ui.main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" />
+    <fragment
+        android:id="@+id/editorFragment"
+        android:name="com.example.easyphone.ui.editor.EditorFragment"
+        android:label="editor_fragment"
+        tools:layout="@layout/editor_fragment" >
+        <action
+            android:id="@+id/action_editorFragment_to_buttonSettingsFragment"
+            app:destination="@id/buttonSettingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buttonSettingsFragment"
+        android:name="com.example.easyphone.ui.button.settings.ButtonSettingsFragment"
+        android:label="button_settings_fragment"
+        tools:layout="@layout/button_settings_fragment" >
+        <argument
+            android:name="buttonId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_buttonSettingsFragment_to_actionEditFragment"
+            app:destination="@id/actionEditFragment"
+            app:popUpTo="@id/editorFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_buttonSettingsFragment_to_editorFragment"
+            app:destination="@id/editorFragment"
+            app:popUpTo="@id/editorFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/actionEditFragment"
+        android:name="com.example.easyphone.ui.action.ActionEditFragment"
+        android:label="action_edit_fragment"
+        tools:layout="@layout/action_edit_fragment" >
+        <argument
+            android:name="myAction"
+            app:argType="string" />
+        <argument
+            android:name="buttonId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_actionEditFragment_to_editorFragment"
+            app:destination="@id/editorFragment"
+            app:popUpTo="@id/editorFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.easyphone.ui.account.AccountFragment"
+        android:label="account_fragment"
+        tools:layout="@layout/account_fragment" />
+</navigation>
