@@ -26,4 +26,6 @@
     <string name="add_btn">Add button</string>
     <string name="button_preview">Button preview</string>
     <string name="sign_in_google">Google sign in</string>
+    <string name="edit_button">Edit Button</string>
+    <string name="edit_action">Edit Action</string>
 </resources>
