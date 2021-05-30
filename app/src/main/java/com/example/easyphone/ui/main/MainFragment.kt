@@ -8,6 +8,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
+import com.example.easyphone.MainActivity
 import com.example.easyphone.R
 import com.example.easyphone.actions.utils.ActionFactory
 import com.example.easyphone.databinding.MainFragmentBinding
@@ -15,7 +16,6 @@ import com.example.easyphone.db.ButtonsDatabase
 import com.example.easyphone.db.entities.ProgrammedButton
 import com.example.easyphone.repository.ButtonsRepository
 import com.example.easyphone.utils.ButtonsDisplayer
-import java.lang.Error
 
 
 class MainFragment : Fragment() {
@@ -40,6 +40,8 @@ class MainFragment : Fragment() {
         return binding.root
     }
 
+
+
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.overflow_menu, menu)
@@ -55,7 +57,7 @@ class MainFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-
+        (activity as MainActivity).setActionBarTitle(resources.getString(R.string.app_name))
         viewModel.updateButtons()
     }
 
@@ -81,7 +83,10 @@ class MainFragment : Fragment() {
             buttonsData.buttons.forEach {
                 val buttonData = it.first
                 val button = it.second
-                val data = actionButtonDataList.find { it.button.id == buttonData.id } ?: throw Error("Unexpected error")
+                val data =
+                    actionButtonDataList.find { it.button.id == buttonData.id } ?: throw Error(
+                        "Unexpected error"
+                    )
                 val action = ActionFactory.create(data.action.type, data.args)
                 button.setOnClickListener {
                     action.performAction(requireContext())

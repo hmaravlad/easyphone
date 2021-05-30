@@ -16,8 +16,11 @@ class ActionToast(val args: Map<String, String>): ButtonAction {
 
         val duration = if (text.length < 30) { Toast.LENGTH_SHORT } else { Toast.LENGTH_LONG }
 
-        Log.d("MY_DEBUG", "EMMM $str")
-        val toast = Toast.makeText(context, str, duration)
-        toast.show()
+        val strSubstitutor = StringDataPatternSubstitutor(context)
+        strSubstitutor.launchWithString(text) { str ->
+            Log.d("MY_DEBUG", "EMMM $str")
+            val toast = Toast.makeText(context, str, duration)
+            toast.show()
+        }
     }
 }

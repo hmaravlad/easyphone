@@ -17,17 +17,21 @@ class ActionEmail(val args: Map<String, String>): ButtonAction {
         if (email == null || subject == null || emailText == null) throw Error("Not enough args")
 
 
-        Log.d("MY_DEBUG", "intent created");
-        val intent = Intent(Intent.ACTION_SENDTO).apply {
-            data = Uri.parse("mailto:") // only email apps should handle this
-            putExtra(Intent.EXTRA_EMAIL, arrayOf(email))
-            putExtra(Intent.EXTRA_TEXT, str)
-            putExtra(Intent.EXTRA_SUBJECT, subject)
-        }
+        val strSubstitutor = StringDataPatternSubstitutor(context)
+        strSubstitutor.launchWithString(emailText) { str ->
+            Log.d("MY_DEBUG", "intent created");
+            val intent = Intent(Intent.ACTION_SENDTO).apply {
+                data = Uri.parse("mailto:") // only email apps should handle this
+                putExtra(Intent.EXTRA_EMAIL, arrayOf(email))
+                putExtra(Intent.EXTRA_TEXT, str)
+                putExtra(Intent.EXTRA_SUBJECT, subject)
+            }
 
-        if (intent.resolveActivity(context.packageManager) != null) {
-            Log.d("MY_DEBUG", "activity resolved");
-            context.startActivity(intent)
+            if (intent.resolveActivity(context.packageManager) != null) {
+                Log.d("MY_DEBUG", "activity resolved");
+                context.startActivity(intent)
+            }
+        }
 
         //context.startActivity(intent)
     }

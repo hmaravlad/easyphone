@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import com.example.easyphone.MainActivity
 import com.example.easyphone.R
 import com.example.easyphone.actions.utils.Actions
 import com.example.easyphone.databinding.ButtonSettingsFragmentBinding
@@ -191,6 +192,7 @@ class ButtonSettingsFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
+        if (activity is MainActivity) (activity as MainActivity).setActionBarTitle(resources.getString(R.string.edit_button))
         val args = ButtonSettingsFragmentArgs.fromBundle(requireArguments())
         viewModel.updateCurrentButton(args.buttonId)
         viewModel.updateButtons()

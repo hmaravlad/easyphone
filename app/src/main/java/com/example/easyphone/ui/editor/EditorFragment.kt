@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import com.example.easyphone.MainActivity
 import com.example.easyphone.R
 import com.example.easyphone.databinding.EditorFragmentBinding
 import com.example.easyphone.db.ButtonsDatabase
@@ -55,6 +56,7 @@ class EditorFragment : Fragment() {
     override fun onResume() {
         super.onResume()
 
+        (activity as MainActivity).setActionBarTitle(resources.getString(R.string.editor))
         viewModel.onDeleteButtonsWithoutActions()
         viewModel.updateButtons()
     }

@@ -26,6 +26,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import com.example.easyphone.MainActivity
 import com.example.easyphone.R
 import com.example.easyphone.actions.utils.ActionArgData
 import com.example.easyphone.databinding.ActionEditFragmentBinding
@@ -116,6 +117,11 @@ class ActionEditFragment : Fragment() {
         })
 
         return binding.root
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (activity is MainActivity) (activity as MainActivity).setActionBarTitle(resources.getString(R.string.edit_action))
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
