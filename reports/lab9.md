@@ -18,3 +18,5 @@ We used default profiling tool. For profiling we executed simple workflow which 
 - Memory usage was about 128MB all the time
 - Battery usage was low most of the time
 - CPU usage was low most of the time and increased during some actions, for example, creating buttons
+
+It's good result
